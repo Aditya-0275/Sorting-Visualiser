@@ -9,31 +9,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="./css/style.css" />
-  <title>Sorting visualizer</title>
+  <title>Sorting Visualizer</title>
 </head>
 
 <body>
-  <div class="nav-container">
-    <h2 class="title" onclick="window.location.reload()">
-      Sorting visualizer
-    </h2>
-    <div class="navbar" id="navbar">
-      <a id="random" onclick="RenderScreen()">Generate array</a>
-      <span class="options">
-        <select name="select sort algorithm" id="menu" class="algo-menu">
-          <option value="0">Choose algorithm</option>
+  <header class="header-container">
+    <h1 class="app-title" onclick="window.location.reload()">Sorting Visualizer</h1>
+    <nav class="nav-bar" id="navigation">
+      <button id="generate-array" onclick="RenderScreen()">Generate Array</button>
+      <div class="dropdown">
+        <label for="algo-select" class="dropdown-label">Algorithm:</label>
+        <select id="algo-select" class="dropdown-menu">
+          <option value="0">Select Algorithm</option>
           <option value="1">Bubble Sort</option>
           <option value="2">Selection Sort</option>
           <option value="3">Insertion Sort</option>
           <option value="4">Merge Sort</option>
           <option value="5">Quick Sort</option>
         </select>
-      </span>
-      <span class="options">
-        <select name="select array size" id="menu" class="size-menu">
-          <option value="0">Array size</option>
+      </div>
+      <div class="dropdown">
+        <label for="size-select" class="dropdown-label">Array Size:</label>
+        <select id="size-select" class="dropdown-menu">
+          <option value="0">Select Size</option>
           <option value="5">5</option>
           <option value="10">10</option>
           <option value="15">15</option>
@@ -47,30 +47,31 @@
           <option value="90">90</option>
           <option value="100">100</option>
         </select>
-      </span>
-      <span class="options">
-        <select name="speed of visualization" id="menu" class="speed-menu">
-          <option value="0">Speed</option>
+      </div>
+      <div class="dropdown">
+        <label for="speed-select" class="dropdown-label">Speed:</label>
+        <select id="speed-select" class="dropdown-menu">
+          <option value="0">Select Speed</option>
           <option value="0.5">0.50x</option>
           <option value="0.75">0.75x</option>
           <option value="1">1.00x</option>
           <option value="2">2.00x</option>
           <option value="4">4.00x</option>
         </select>
-      </span>
-      <a class="start">Sort</a>
-      <a class="icon"><i class="fa fa-bars"></i></a>
-    </div>
-  </div>
-  <div class="center">
-    <div class="array"></div>
-  </div>
-  <footer class="footer">
+      </div>
+      <button class="sort-button">Sort</button>
+      <button class="menu-icon"><i class="fa fa-bars"></i></button>
+    </nav>
+  </header>
+  <main class="visualizer-container">
+    <section class="array-container"></section>
+  </main>
+  <footer class="footer-container">
     <p>
-      <a href="https://www.linkedin.com/in/aditya-sharma-780730248/" target="_blank" class="link">
+      <a href="https://www.linkedin.com/in/aditya-sharma-780730248/" target="_blank" class="social-link">
         <i class="fa fa-linkedin-square" aria-hidden="true"></i>
       </a>
-      <a href="https://github.com/Aditya-0275" target="_blank" class="link">
+      <a href="https://github.com/Aditya-0275" target="_blank" class="social-link">
         <i class="fa fa-github" aria-hidden="true"></i>
       </a>
     </p>
